@@ -1,0 +1,32 @@
+{
+  "name": "artgallery",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "bootstrap": "^3.3.7",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "ejs": "~2.5.6",
+    "express": "~4.15.2",
+    "express-bootstrap-service": "^1.0.0",
+    "express-jquery": "^1.8.3",
+    "express-session": "^1.15.2",
+    "express-validator": "^3.2.0",
+    "install": "^0.8.8",
+    "jquery": "^3.2.1",
+    "mongodb": "^2.2.26",
+    "mongoose": "^4.9.5",
+    "morgan": "~1.8.1",
+    "npm": "^4.5.0",
+    "serve-favicon": "~2.4.2",
+    "socket.io": "^1.7.3",
+    "speakeasy": "^2.0.0",
+    "twilio": "^2.11.1",
+    "formidable":"^1.2.1"
+
+  }
+}
