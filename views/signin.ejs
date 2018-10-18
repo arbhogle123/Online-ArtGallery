@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration Form</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="signassets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="signassets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="signassets/css/form-elements.css">
+    <link rel="stylesheet" href="signassets/css/style.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="signassets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="signassets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="signassets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="signassets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="signassets/ico/apple-touch-icon-57-precomposed.png">
+
+</head>
+
+<body>
+
+<!-- Top content -->
+<div class="top-content">
+
+    <div class="inner-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text">
+                    <h1><strong>Art For All</strong> Sign Up Form</h1>
+                    <p>Mission, Vission & Values</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-sm-offset-3 form-box">
+                    <div class="form-top">
+                        <div class="form-top-left">
+                            <h3>Login to our site</h3>
+                            <p>Enter the following details:</p>
+                        </div>
+                        <div class="form-top-right">
+                            <i class="fa fa-key"></i>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <form name = "signupform" onsubmit="return validateForm()" action="/signin" method="post" >
+                            <h2 style="color: red;text-align: center;"><%= msg %></h2>
+                            <div class="form-group">
+                                <label class="control-label" for="formfname">First Name</label>
+                                <input type="text" name="formfname" placeholder="First Name" class="formfname form-control" id="formfname" value="">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="formlname">Last Name</label>
+                                <input type="text" name="formlname" placeholder="Last Name" class="formlname form-control" id="formlname" value="">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="formemail">Email</label>
+                                <input type="email" name="formemail" placeholder="Email..." class="formemail form-control" id="formemail"value="">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="formmno">Mobile Number</label>
+                                <input type="text" name="formmno" placeholder="Mobile No.." class="formmno form-control" id="formmno" value="">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="formusername">Username</label>
+                                <input type="text" name="formusername" placeholder="Username..." class="formusername form-control" id="formusername" value="">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="formpassword">Password</label>
+                                <input type="password" name="formpassword" placeholder="Password..." class="form-password form-control" id="formpassword" value="">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="formconfpassword">Confirm Password</label>
+                                <input type="password" name="formconfpassword" placeholder="Confirm Password..." class="formconfpassword form-control" id="formconfpassword" value="">
+                            </div>
+
+                            <input type="submit" name="signin" value="Signup" class="btn">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3 social-login">
+                    <h3>...or register with:</h3>
+                    <div class="social-login-buttons">
+                        <a class="btn btn-link-1 btn-link-1-facebook" href="#">
+                            <i class="fa fa-facebook"></i> Facebook
+                        </a>
+                        <a class="btn btn-link-1 btn-link-1-twitter" href="#">
+                            <i class="fa fa-twitter"></i> Twitter
+                        </a>
+                        <a class="btn btn-link-1 btn-link-1-google-plus" href="#">
+                            <i class="fa fa-google-plus"></i> Google Plus
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Javascript -->
+<script src="signassets/js/jquery-1.11.1.min.js"></script>
+<script src="signassets/bootstrap/js/bootstrap.min.js"></script>
+<script src= "signassets/js/jquery.backstretch.min.js"></script>
+<script src="signassets/js/scripts.js"></script>
+
+<!--[if lt IE 10]>
+<script src="signassets/js/placeholder.js"></script>
+<![endif]-->
+<script>
+    var validateForm = function()
+        {
+            var fname = document.signupform.formfname.value;
+            var lname = document.signupform.formlname.value;
+            var username = document.signupform.formusername.value;
+            var password = document.signupform.formpassword.value;
+            var cpassword = document.signupform.formconfpassword.value;
+            var mobno = document.signupform.formmno.value;
+            var email = document.signupform.formemail.value;
+            var ck_name = /^[A-Za-z_]{2,20}$/;
+            var ck_username = /^[a-z0-9_]{3,20}$/;
+            var ck_password = /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;
+            var ck_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var ck_no = /^\d{10}$/;
+
+            if(fname.length === 0)
+            {
+                alert("Enter your first Name");
+                return false ;
+            }
+            else if(lname.length === 0)
+            {
+                alert("Enter your last Name");
+                return false;
+            }
+            else if(email.length === 0)
+            {    alert("You have not entered your email ID");
+                return false;
+            }
+            else if(!ck_email.test(email))
+            {
+                alert("Not a valid e-mail address");
+                return false;
+            }
+            else if(mobno === 0)
+            {    alert("You have not entered your Mobile Number");
+                return false;
+            }
+            else if(!ck_no.test(mobno))
+            {
+                alert("Not a valid mobile number");
+                return false;
+            }
+            else if (!ck_username.test(username)) {
+                alert("Enter valid username");
+                return false;
+            }
+            else if (!ck_password.test(password)) {
+                alert("Enter valid password");
+                return false;
+            }
+            else if (password !== cpassword) {
+                alert("Password and confirm password do not match.");
+                return false;
+            }
+
+            else {
+                return true ;
+            }
+
+        }
+</script>
+        </body>
+
+</html>
